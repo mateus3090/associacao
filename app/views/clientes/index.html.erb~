@@ -22,7 +22,7 @@
     <td><%= cliente.endereco %></td>
     <td><%= cliente.seguro %></td>
     <td><%= link_to 'Show', cliente %></td>
-    <td><%= link_to 'Edit', edit_cliente_path(cliente) %></td>
+    <td><%= link_to 'Salvar', edit_cliente_path(cliente) %></td>
     <td><%= link_to 'Excluir', cliente, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
