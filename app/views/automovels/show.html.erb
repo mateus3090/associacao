@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Codigo:</b>
+  <%= @automovel.codigo %>
+</p>
+
+<p>
+  <b>Modelo:</b>
+  <%= @automovel.modelo %>
+</p>
+
+<p>
+  <b>Marca:</b>
+  <%= @automovel.marca %>
+</p>
+
+<p>
+  <b>Tipo:</b>
+  <%= @automovel.tipo %>
+</p>
+
+<p>
+  <b>Cliente:</b>
+  <%= @automovel.cliente.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_automovel_path(@automovel) %> |
+<%= link_to 'Back', automovels_path %>

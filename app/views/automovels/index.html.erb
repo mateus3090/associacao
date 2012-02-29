@@ -1,0 +1,31 @@
+<h1>Listing automovels</h1>
+
+<table>
+  <tr>
+    <th>Codigo</th>
+    <th>Modelo</th>
+    <th>Marca</th>
+    <th>Tipo</th>
+    <th>Cliente</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @automovels.each do |automovel| %>
+  <tr>
+    <td><%= automovel.codigo %></td>
+    <td><%= automovel.modelo %></td>
+    <td><%= automovel.marca %></td>
+    <td><%= automovel.tipo %></td>
+    <td><%= automovel.cliente.nome %></td>
+    <td><%= link_to 'Show', automovel %></td>
+    <td><%= link_to 'Edit', edit_automovel_path(automovel) %></td>
+    <td><%= link_to 'Destroy', automovel, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Automovel', new_automovel_path %>

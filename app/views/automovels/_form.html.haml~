@@ -1,0 +1,8 @@
+= semantic_form_for(@automovel) do |f|
+	= f.input :codigo, :label => 'codigo'
+	= f.input :modelo, :label => 'modelo'
+	= f.input :marca, :label => 'marca'
+	= f.input :tipo, :label => 'tipo'
+	= f.input :cliente, :member_label => :nome, :label => 'cliente'
+	= f.submit 'Salvar'
+  
