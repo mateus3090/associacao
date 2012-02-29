@@ -50,7 +50,17 @@ scenario 'alterar automovel' do #, :javascript => true do
     page.should have_content 'Marca: fiat'
     page.should have_content 'Tipo: esporte'
     page.should have_content 'Cliente: joao'
-end
+  end
+
+scenario 'excluir cliente' do #, :javascript => true do
+
+    automovel = FactoryGirl.create(:automovel)
+    visit automovel_path
+
+    click_link 'Excluir'
+    
+    Cliente.count.should == 0
+  end
 
  
 end

@@ -18,10 +18,10 @@
     <td><%= automovel.modelo %></td>
     <td><%= automovel.marca %></td>
     <td><%= automovel.tipo %></td>
-    <td><%= automovel.cliente.nome %></td>
+    <td><%= automovel.cliente %></td>
     <td><%= link_to 'Show', automovel %></td>
     <td><%= link_to 'Edit', edit_automovel_path(automovel) %></td>
-    <td><%= link_to 'Destroy', automovel, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Excluir', automovel, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>

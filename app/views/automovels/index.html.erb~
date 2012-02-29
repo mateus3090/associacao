@@ -21,7 +21,7 @@
     <td><%= automovel.cliente.nome %></td>
     <td><%= link_to 'Show', automovel %></td>
     <td><%= link_to 'Edit', edit_automovel_path(automovel) %></td>
-    <td><%= link_to 'Destroy', automovel, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Excluir', automovel, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
