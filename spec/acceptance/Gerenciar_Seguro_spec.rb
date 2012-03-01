@@ -49,6 +49,16 @@ scenario 'alterar Seguro' do #, :javascript => true do
 
   end
 
+scenario 'excluir seguro' do #, :javascript => true do
+
+    seguro = FactoryGirl.create(:seguro)
+    visit seguros_path
+
+    click_link 'Excluir'
+    
+    Seguro.count.should == 0
+  end
+
 
 end
 

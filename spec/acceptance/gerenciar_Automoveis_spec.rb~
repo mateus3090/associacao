@@ -55,7 +55,7 @@ scenario 'alterar automovel' do #, :javascript => true do
 scenario 'excluir cliente' do #, :javascript => true do
 
     automovel = FactoryGirl.create(:automovel)
-    visit automovel_path
+    visit automovels_path
 
     click_link 'Excluir'
     

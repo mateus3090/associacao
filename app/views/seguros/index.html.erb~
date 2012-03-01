@@ -16,7 +16,7 @@
     <td><%= seguro.codigo %></td>
     <td><%= seguro.tipo %></td>
     <td><%= seguro.descricao %></td>
-    <td><%= seguro.automovel %></td>
+    <td><%= seguro.automovel.marca %></td>
     <td><%= link_to 'Show', seguro %></td>
     <td><%= link_to 'Edit', edit_seguro_path(seguro) %></td>
     <td><%= link_to 'Excluir', seguro, confirm: 'Are you sure?', method: :delete %></td>
