@@ -1,0 +1,29 @@
+<h1>Listing seguros</h1>
+
+<table>
+  <tr>
+    <th>Codigo</th>
+    <th>Tipo</th>
+    <th>Descricao</th>
+    <th>Automovel</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @seguros.each do |seguro| %>
+  <tr>
+    <td><%= seguro.codigo %></td>
+    <td><%= seguro.tipo %></td>
+    <td><%= seguro.descricao %></td>
+    <td><%= seguro.automovel %></td>
+    <td><%= link_to 'Show', seguro %></td>
+    <td><%= link_to 'Edit', edit_seguro_path(seguro) %></td>
+    <td><%= link_to 'Excluir', seguro, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Seguro', new_seguro_path %>

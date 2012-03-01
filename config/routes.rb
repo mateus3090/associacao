@@ -1,4 +1,6 @@
 Associacao::Application.routes.draw do
+  resources :seguros
+
   resources :automovels
 
   resources :clientes
