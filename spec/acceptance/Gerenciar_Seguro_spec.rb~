@@ -27,5 +27,28 @@ feature 'gerenciar_seguro' do
 
   end
 
+scenario 'alterar Seguro' do #, :javascript => true do
+
+  automovel = FactoryGirl.create(:automovel,:marca => 'vw')
+  seguro = FactoryGirl.create(:seguro)
+  
+  visit edit_seguro_path(seguro)
+  
+
+    fill_in 'seguro_codigo', :with => '01'
+    fill_in 'seguro_tipo', :with => 'caro'
+    fill_in 'seguro_descricao' , :with => 'aaa'
+    select 'vw', :on => 'automovel'
+
+  click_button 'Salvar'
+
+    page.should have_content 'Codigo: 01'
+    page.should have_content 'Tipo: caro'
+    page.should have_content 'Descricao: aaa'
+    page.should have_content 'Automovel: vw'
+
+  end
+
+
 end
 
