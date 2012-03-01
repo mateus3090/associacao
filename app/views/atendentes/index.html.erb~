@@ -1,0 +1,31 @@
+<h1>Listing atendentes</h1>
+
+<table>
+  <tr>
+    <th>Codigo</th>
+    <th>Nome</th>
+    <th>Cpf</th>
+    <th>Rg</th>
+    <th>Endereco</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @atendentes.each do |atendente| %>
+  <tr>
+    <td><%= atendente.codigo %></td>
+    <td><%= atendente.nome %></td>
+    <td><%= atendente.cpf %></td>
+    <td><%= atendente.rg %></td>
+    <td><%= atendente.endereco %></td>
+    <td><%= link_to 'Show', atendente %></td>
+    <td><%= link_to 'Edit', edit_atendente_path(atendente) %></td>
+    <td><%= link_to 'Destroy', atendente, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Atendente', new_atendente_path %>
