@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Codigo:</b>
+  <%= @ocorrencium.codigo %>
+</p>
+
+<p>
+  <b>Data:</b>
+  <%= @ocorrencium.data %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%= @ocorrencium.descricao %>
+</p>
+
+<p>
+  <b>Hora:</b>
+  <%= @ocorrencium.hora %>
+</p>
+
+<p>
+  <b>Cliente:</b>
+  <%= @ocorrencium.cliente.nome %>
+</p>
+
+<p>
+  <b>Seguro:</b>
+  <%= @ocorrencium.seguro.tipo %>
+</p>
+
+<p>
+  <b>Automovel:</b>
+  <%= @ocorrencium.automovel.marca %>
+</p>
+
+
+<%= link_to 'Edit', edit_ocorrencium_path(@ocorrencium) %> |
+<%= link_to 'Back', ocorrencia_path %>

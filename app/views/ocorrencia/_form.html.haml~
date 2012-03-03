@@ -1,0 +1,10 @@
+= semantic_form_for(@ocorrencium) do |f|
+  = f.input :codigo, :label => 'codigo'
+  = f.input :data, :label => 'data'
+  = f.input :descricao, :label => 'descricao'
+  = f.input :hora, :label => 'hora'
+  = f.input :cliente, :member_label => :nome, :label => 'cliente'
+  = f.input :seguro, :member_label => :codigo, :label => 'seguro'
+  = f.input :automovel, :member_label => :codigo, :label => 'automovel'
+  = f.submit 'Salvar'
+  

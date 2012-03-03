@@ -1,0 +1,35 @@
+<h1>Listing ocorrencia</h1>
+
+<table>
+  <tr>
+    <th>Codigo</th>
+    <th>Data</th>
+    <th>Descricao</th>
+    <th>Hora</th>
+    <th>Cliente</th>
+    <th>Seguro</th>
+    <th>Automovel</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ocorrencia.each do |ocorrencium| %>
+  <tr>
+    <td><%= ocorrencium.codigo %></td>
+    <td><%= ocorrencium.data %></td>
+    <td><%= ocorrencium.descricao %></td>
+    <td><%= ocorrencium.hora %></td>
+    <td><%= ocorrencium.cliente.nome %></td>
+    <td><%= ocorrencium.seguro.tipo %></td>
+    <td><%= ocorrencium.automovel.marca %></td>
+    <td><%= link_to 'Show', ocorrencium %></td>
+    <td><%= link_to 'Edit', edit_ocorrencium_path(ocorrencium) %></td>
+    <td><%= link_to 'Destroy', ocorrencium, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ocorrencium', new_ocorrencium_path %>
