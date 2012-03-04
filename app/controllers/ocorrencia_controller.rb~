@@ -1,0 +1,2 @@
+class OcorrenciumController < InheritedResources::Base
+end
