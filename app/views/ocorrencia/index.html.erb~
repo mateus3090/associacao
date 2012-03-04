@@ -25,7 +25,7 @@
     <td><%= ocorrencium.automovel.marca %></td>
     <td><%= link_to 'Show', ocorrencium %></td>
     <td><%= link_to 'Edit', edit_ocorrencium_path(ocorrencium) %></td>
-    <td><%= link_to 'Destroy', ocorrencium, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Excluir', ocorrencium, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>

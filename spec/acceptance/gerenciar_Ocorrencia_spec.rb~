@@ -40,7 +40,8 @@ scenario 'alterar ocorrencia' do #, :javascript => true do
 
     cliente = FactoryGirl.create(:cliente,:nome => 'joao')
     seguro = FactoryGirl.create(:seguro,:tipo => '02') 
-    automovel = FactoryGirl.create(:automovel,:marca => '01')   
+    automovel = FactoryGirl.create(:automovel,:marca => '01')
+    ocorrencium = FactoryGirl.create(:ocorrencium)   
     visit edit_ocorrencium_path(ocorrencium)
    
     
@@ -64,5 +65,13 @@ scenario 'alterar ocorrencia' do #, :javascript => true do
     page.should have_content 'Automovel: 01'
 
   end
+scenario 'excluir ocorrencia' do #, :javascript => true do
 
+    ocorrencium = FactoryGirl.create(:ocorrencium)
+    visit ocorrencium_path
+
+    click_link 'Excluir'
+    
+    Ocorrencium.count.should == 0
+  end
 end
